@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from './components/Header';
 import Card from './components/Card';
 import AddMovie from './components/AddMovie';
@@ -7,9 +7,13 @@ import Detail from './components/Detail';
 import {createContext, useState} from 'react'
 import Login from './components/Login'
 import SignUp from './components/SignUp'
+import { getDoc } from 'firebase/firestore';
 
 const Appstate = createContext();
 function App() {
+  useEffect(()=>{
+        console.log();
+  },[]);
   const [login, setLogin] = useState(false);
   const [userName, setUserName] = useState('');
   return (
