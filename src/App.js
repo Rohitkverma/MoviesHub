@@ -8,6 +8,7 @@ import {createContext, useState} from 'react'
 import Login from './components/Login'
 import SignUp from './components/SignUp'
 import { getDoc } from 'firebase/firestore';
+import { NotFound } from './components/NotFound';
 
 const Appstate = createContext();
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/detail/:id' element={<Detail/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<SignUp/>}/>
+        <Route path='*' element={<NotFound/>}/>
       </Routes>
       </Appstate.Provider>
     </div>

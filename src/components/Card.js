@@ -23,7 +23,7 @@ const Card = () => {
     getData();
   }, [])
   return (<>
-    <div className='cardmargin flex justify-between flex-wrap mt-2 p-3 '>
+    <div className='cardmargin flex justify-between flex-wrap mt-2 p-4 '>
       { loading ? <div className='w-full flex justify-center items-center h-96'><Puff height={80} color='white'/></div> :
       data.map((e, i)=>{
         return(
